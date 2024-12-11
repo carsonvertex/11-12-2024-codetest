@@ -1,5 +1,5 @@
 
-interface User { 
+export interface User { 
     id: number;
     name: string;
     age: number;
@@ -7,4 +7,8 @@ interface User {
     remarks: string;
 }
 
-export default User;
+export interface CardProps {
+    user: User;
+    onDelete: (id: number) => void;
+    onEdit: (user: User) => void; // New prop for editing
+  }
